@@ -1,0 +1,16 @@
+{
+  "Browser" : "chrome",
+  "URL" : "https://uat3.asp2.aw.navigatetax.pwc.co.in/#/gstr1/prepare ",
+  "Username": "itadmin_gst_michelin_uat3",
+  "Password" : "itadmin@123",
+  
+  "BirdBank": "https://birdbank.pythonanywhere.com/",
+  
+  "BirdBankUsername": "testuser1",
+  "BirdBankPassword" : "testpassword",
+  "emailSend" : "No",
+  "emailSubject" : "Demo Web Automation Report",
+  "emailIdFrom" : "automation.pwc1@gmail.com",
+  "passwordFrom" : "yeykcsjavwfiwuii",
+  "emailIdTo": "pallavi.gupta@tothenew.com"
+}

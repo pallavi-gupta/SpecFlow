@@ -1,0 +1,131 @@
+Nunit:
+
+
+TestFixture : to store data which we want to use in overall Test
+To access the values we ned to create constructor first
+then we can use those values
+if we give multiple values Test will run for all the testdata provided in Testfixtures
+
+TestCase Attribute :
+here also we can pass th evalues and use it in out test script
+
+Tagging in Nunit : Category Attribute is used to this task 
+dotnet test ==filter "category=smoke" -> it will run the smoke testcases only
+
+for the Data driven testing
+we can use TestCaseSource(nameOf(PropertyName))
+
+@Test(LoginModel loginmodel)
+to use its field we can use loginmodel.username , loginmodel.password
+
+
+Tuples in C#
+to return the value of 2 methods in single method we use tuples
+
+like in a methodA we want to verify Locator A and B element present
+
+public (bool , bool) methodA(){
+return (A.isdisplayed, B.Isdisplayed)
+}
+
+to access this 
+var vari = methodA.Item1 => it will return the value of frstcondition
+var vari = methodA.Item2 => it will return the value of scndcondition
+
+
+handle browser authentication prompts in Selenium WebDriver with C#? 
+http://username:password@example.com" to bypass the authentication prompt.
+
+
+For Dropdown : SelectElemnt - SelectByText , SelectByValue , SelectByIndex
+
+For Windows handling : CurrentWindowHandle ,  WindowHandles(Readonly<string>) 
+
+// Get the current window handle
+string currentWindowHandle = driver.CurrentWindowHandle;
+
+// Get the handles of all open windows
+List<string> windowHandles = driver.WindowHandles.ToList();
+
+// Switch to a new window
+driver.SwitchTo().Window(windowHandles[1]);
+
+// Switch back to the original window
+driver.SwitchTo().Window(currentWindowHandle);
+
+
+FOR FRAMES : driver.SwitchTo().Frame(0);
+driver.SwitchTo().Frame("name/id");
+driver.SwitchTo().DefaultContent();
+
+// Mouse HOVER
+
+
+// in Nunuit to Ignore
+we can add [ignore = 'Any msg']
+
+// for ordering
+[Test , Order(number)]
+
+// Same msg multiple time
+[Repeat(number)] -> if fail it runs only single time remaing will be ignored
+
+[Retyr(number) -> if fail it will rerun it by given number of times
+
+// for run with multiple set of data
+
+TestCase(value1 , value2)
+and with in test methods we pass those values as an argument
+
+
+You can get the background color of element using: element. getCssValue("background-color");
+
+get the height and widht of some element in selenium : getSize() method
+This class contains the width and height of the target WebElement
+
+driver.Manage().Window.Maximize(); - to maximize
+
+driver.Manage().Window.Size = new Size(800, 600);
+
+// Assertion
+
+Assert.that(string , Is.EMpty)
+Assert.that(string , Is.Not.EMpty)
+Assert.that(string,Does.contains())
+Assert.that(string,Does.contains().ignorecase)
+Assert.that(string, Does.Not.StartWith())
+Assert.that(string, Does.Not.EndWith())
+
+// Actions Clas
+actions ac = new Actions(driver)
+ac.keyDown(Key.Control).
+click(WebElement1). Click(WebElement2).Click(WebElement3).Keyup(key.control).build().perform() / at same time
+
+ac.keyDown(WebElement1,Keys.Control)
+.keyDown(WebElement1,Keys.Control)
+.keyUp(WebElement1,Keys.Control).Build().Perform()
+
+// Actions class with Sendkeys
+ac.sendkeys(keys.end).perform()
+ac.sendkeys(keys.Home).perform()
+ac.moveToElement(Element).Build().perform()
+ac.moveToElement(Element).Click().Build().perform()
+ac.click(Element).Build().perform()
+ac.moveToElement(Element).DoubleClick().Build().perform()
+ac.doubleclick(Element).Build().perform()
+ac.movetoelement(start).clickAndHold().movetoelement(lastpoint).Release()
+ac.dragAnddrop(startwebelement,droppedlocation).build().perform()
+
+
+
+
+Hooks Sequence in specflow:
+
+
+
+
+
+
+
+
+

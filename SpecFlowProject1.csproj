@@ -1,0 +1,181 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Using Include="TechTalk.SpecFlow" />
+    </ItemGroup>
+
+    <ItemGroup>
+
+        <PackageReference Include="DotNetSeleniumExtras.WaitHelpers" Version="3.11.0" />
+        <PackageReference Include="ExtentReports" Version="4.1.0" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.0.0" />
+        <PackageReference Include="NUnit.ConsoleRunner" Version="3.17.0" />
+        <PackageReference Include="Selenium.Support" Version="4.22.0" />
+        <PackageReference Include="Selenium.WebDriver" Version="4.22.0" />
+        <PackageReference Include="Selenium.WebDriver.GeckoDriver" Version="0.34.0" />
+        <PackageReference Include="SpecFlow.Plus.LivingDocPlugin" Version="3.9.57" />
+        <PackageReference Include="SpecFlow.NUnit" Version="3.9.22" />
+        <PackageReference Include="nunit" Version="3.13.2" />
+        <PackageReference Include="NUnit3TestAdapter" Version="4.1.0" />
+        <PackageReference Include="FluentAssertions" Version="6.2.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Compile Update="Features\Cal2.feature.cs">
+            <DependentUpon>Cal2.feature</DependentUpon>
+            <AutoGen>true</AutoGen>
+            <DesignTime>true</DesignTime>
+            <Visible>true</Visible>
+        </Compile>
+        <Compile Remove="SpecFlow.Plus.Examples\**" />
+        <Compile Update="Features\GSTR1.feature.cs">
+          <DependentUpon>GSTR1.feature</DependentUpon>
+        </Compile>
+        <Compile Remove="Features\BirdBank.feature.cs" />
+        <Compile Update="Features\BirdBanks.feature.cs">
+          <DependentUpon>BirdBanks.feature</DependentUpon>
+        </Compile>
+        <Compile Remove="Features\Test.feature.cs" />
+        <Compile Remove="Steps\BirdBankStepDef.cs" />
+        <Compile Remove="Drivers\SeleniumDriver.cs" />
+        <Compile Remove="Pages\Test1.cs" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Folder Include="reports\" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <SpecFlowFeatureFiles Remove="SpecFlow.Plus.Examples\**" />
+        <SpecFlowFeatureFiles Remove="Features\GSTR1.feature" />
+        <SpecFlowFeatureFiles Remove="Features\BirdBank.feature" />
+        <SpecFlowFeatureFiles Remove="Features\BirdBanks.feature" />
+        <SpecFlowFeatureFiles Remove="Features\BirdBankTest.feature" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <EmbeddedResource Remove="SpecFlow.Plus.Examples\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Remove="SpecFlow.Plus.Examples\**" />
+        <None Remove="tsconfig.json" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <UpToDateCheckInput Remove="SpecFlow.Plus.Examples\AccessTargetName\AccessTargetName\Features\Access Target Name.feature" />
+        <UpToDateCheckInput Remove="SpecFlow.Plus.Examples\AppVeyor_Support\MyProject.Specs\Features\AppVeyor.feature" />
+        <UpToDateCheckInput Remove="SpecFlow.Plus.Examples\Archive\contactlist\contactlist\contactlist.Test\Features\Add Contact.feature" />
+        <UpToDateCheckInput Remove="SpecFlow.Plus.Examples\Archive\contactlist\contactlist\contactlist.Test\Features\ContactList.feature" />
+        <UpToDateCheckInput Remove="SpecFlow.Plus.Examples\Archive\simpleCalc\simpleCalc\simpleCalc.Test\Features\Calc.feature" />
+        <UpToDateCheckInput Remove="SpecFlow.Plus.Examples\Archive\simpleCalc_SpecFlowPlusStudio_LogicTests\simpleCalc.Test\Features\Calc.feature" />
+        <UpToDateCheckInput Remove="SpecFlow.Plus.Examples\CustomDeploymentSteps\WindowsAppDriver\Features\Calculator.feature" />
+        <UpToDateCheckInput Remove="SpecFlow.Plus.Examples\DeploymentTransformationMultipleThreads\DatabaseCode.Tests\Features\DatabaseWrite.feature" />
+        <UpToDateCheckInput Remove="SpecFlow.Plus.Examples\DockerExample\DockerExample.Specs\Features\DockerExample.Specs.feature" />
+        <UpToDateCheckInput Remove="SpecFlow.Plus.Examples\ExcelExample\ExcelExample\Features\CalculatorAdd.feature.xlsx.feature" />
+        <UpToDateCheckInput Remove="SpecFlow.Plus.Examples\ExcelExample\ExcelExample\Features\CalculatorDivide.feature" />
+        <UpToDateCheckInput Remove="SpecFlow.Plus.Examples\ExcelExample\ExcelExample\Features\CalculatorMultiply.feature" />
+        <UpToDateCheckInput Remove="SpecFlow.Plus.Examples\ExcelExample\ExcelExample\Features\CalculatorSubtract.feature" />
+        <UpToDateCheckInput Remove="SpecFlow.Plus.Examples\ExcelExample\ExcelExample\Steps\Features\CalculatorDivide.feature" />
+        <UpToDateCheckInput Remove="SpecFlow.Plus.Examples\ExcelExample\ExcelExample\Steps\Features\CalculatorMultiply.feature" />
+        <UpToDateCheckInput Remove="SpecFlow.Plus.Examples\ExcelExample\ExcelExample\Steps\Features\CalculatorSubstract.feature" />
+        <UpToDateCheckInput Remove="SpecFlow.Plus.Examples\FilterExample\FilterTest\Features\CalculatorAdd.feature" />
+        <UpToDateCheckInput Remove="SpecFlow.Plus.Examples\FilterExample\FilterTest\Features\CalculatorDivide.feature" />
+        <UpToDateCheckInput Remove="SpecFlow.Plus.Examples\FilterExample\FilterTest\Features\CalculatorMultiply.feature" />
+        <UpToDateCheckInput Remove="SpecFlow.Plus.Examples\FilterExample\FilterTest\Features\CalculatorSubstract.feature" />
+        <UpToDateCheckInput Remove="SpecFlow.Plus.Examples\Getting_Started\MyProject.Specs\Features\Calculator.feature" />
+        <UpToDateCheckInput Remove="SpecFlow.Plus.Examples\Getting_Started_Excel\MySpecs\calc.feature.xlsx.feature" />
+        <UpToDateCheckInput Remove="SpecFlow.Plus.Examples\MultipleBrowserAgainstDifferentEnvironments\TestApplication.UiTests\Features\Search.feature" />
+        <UpToDateCheckInput Remove="SpecFlow.Plus.Examples\MultipleReports\MultipleReports\Features\Calculator.feature" />
+        <UpToDateCheckInput Remove="SpecFlow.Plus.Examples\NewCSProjFormat\SpecFlowNewCSProjFormat\Features\SpecFlowFeature1.feature" />
+        <UpToDateCheckInput Remove="SpecFlow.Plus.Examples\SeleniumGridWebTest\TestApplication.UiTests\Features\CalculatorFeature.feature" />
+        <UpToDateCheckInput Remove="SpecFlow.Plus.Examples\SeleniumWebTest\TestApplication.UiTests\Features\CalculatorFeature.feature" />
+        <UpToDateCheckInput Remove="SpecFlow.Plus.Examples\TestThreadIsolation\TestThreadIsolation\Features\DatabaseAdd.feature" />
+        <UpToDateCheckInput Remove="SpecFlow.Plus.Examples\TestThreadIsolation\TestThreadIsolation\Features\MemoryAdd.feature" />
+        <UpToDateCheckInput Remove="SpecFlow.Plus.Examples\UseVSCode\src\TestProject\Features\UsingVSCodeAndSpecFlow.feature" />
+        <UpToDateCheckInput Remove="SpecFlow.Plus.Examples\VSTest_UnifiedResults\VSTest_UnifiedResults\Features\Scenarios.feature" />
+        <UpToDateCheckInput Remove="SpecFlow.Plus.Examples\WindowsAppDriver\WindowsAppDriver\Features\Calculator.feature" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <UpToDateCheckBuild Remove="SpecFlow.Plus.Examples\AccessTargetName\AccessTargetName\Features\Access Target Name.feature.cs" />
+        <UpToDateCheckBuild Remove="SpecFlow.Plus.Examples\AppVeyor_Support\MyProject.Specs\Features\AppVeyor.feature.cs" />
+        <UpToDateCheckBuild Remove="SpecFlow.Plus.Examples\Archive\contactlist\contactlist\contactlist.Test\Features\Add Contact.feature.cs" />
+        <UpToDateCheckBuild Remove="SpecFlow.Plus.Examples\Archive\contactlist\contactlist\contactlist.Test\Features\ContactList.feature.cs" />
+        <UpToDateCheckBuild Remove="SpecFlow.Plus.Examples\Archive\simpleCalc\simpleCalc\simpleCalc.Test\Features\Calc.feature.cs" />
+        <UpToDateCheckBuild Remove="SpecFlow.Plus.Examples\Archive\simpleCalc_SpecFlowPlusStudio_LogicTests\simpleCalc.Test\Features\Calc.feature.cs" />
+        <UpToDateCheckBuild Remove="SpecFlow.Plus.Examples\CustomDeploymentSteps\WindowsAppDriver\Features\Calculator.feature.cs" />
+        <UpToDateCheckBuild Remove="SpecFlow.Plus.Examples\DeploymentTransformationMultipleThreads\DatabaseCode.Tests\Features\DatabaseWrite.feature.cs" />
+        <UpToDateCheckBuild Remove="SpecFlow.Plus.Examples\DockerExample\DockerExample.Specs\Features\DockerExample.Specs.feature.cs" />
+        <UpToDateCheckBuild Remove="SpecFlow.Plus.Examples\ExcelExample\ExcelExample\Features\CalculatorAdd.feature.xlsx.feature.cs" />
+        <UpToDateCheckBuild Remove="SpecFlow.Plus.Examples\ExcelExample\ExcelExample\Features\CalculatorDivide.feature.cs" />
+        <UpToDateCheckBuild Remove="SpecFlow.Plus.Examples\ExcelExample\ExcelExample\Features\CalculatorMultiply.feature.cs" />
+        <UpToDateCheckBuild Remove="SpecFlow.Plus.Examples\ExcelExample\ExcelExample\Features\CalculatorSubtract.feature.cs" />
+        <UpToDateCheckBuild Remove="SpecFlow.Plus.Examples\ExcelExample\ExcelExample\Steps\Features\CalculatorDivide.feature.cs" />
+        <UpToDateCheckBuild Remove="SpecFlow.Plus.Examples\ExcelExample\ExcelExample\Steps\Features\CalculatorMultiply.feature.cs" />
+        <UpToDateCheckBuild Remove="SpecFlow.Plus.Examples\ExcelExample\ExcelExample\Steps\Features\CalculatorSubstract.feature.cs" />
+        <UpToDateCheckBuild Remove="SpecFlow.Plus.Examples\FilterExample\FilterTest\Features\CalculatorAdd.feature.cs" />
+        <UpToDateCheckBuild Remove="SpecFlow.Plus.Examples\FilterExample\FilterTest\Features\CalculatorDivide.feature.cs" />
+        <UpToDateCheckBuild Remove="SpecFlow.Plus.Examples\FilterExample\FilterTest\Features\CalculatorMultiply.feature.cs" />
+        <UpToDateCheckBuild Remove="SpecFlow.Plus.Examples\FilterExample\FilterTest\Features\CalculatorSubstract.feature.cs" />
+        <UpToDateCheckBuild Remove="SpecFlow.Plus.Examples\Getting_Started\MyProject.Specs\Features\Calculator.feature.cs" />
+        <UpToDateCheckBuild Remove="SpecFlow.Plus.Examples\Getting_Started_Excel\MySpecs\calc.feature.xlsx.feature.cs" />
+        <UpToDateCheckBuild Remove="SpecFlow.Plus.Examples\MultipleBrowserAgainstDifferentEnvironments\TestApplication.UiTests\Features\Search.feature.cs" />
+        <UpToDateCheckBuild Remove="SpecFlow.Plus.Examples\MultipleReports\MultipleReports\Features\Calculator.feature.cs" />
+        <UpToDateCheckBuild Remove="SpecFlow.Plus.Examples\NewCSProjFormat\SpecFlowNewCSProjFormat\Features\SpecFlowFeature1.feature.cs" />
+        <UpToDateCheckBuild Remove="SpecFlow.Plus.Examples\SeleniumGridWebTest\TestApplication.UiTests\Features\CalculatorFeature.feature.cs" />
+        <UpToDateCheckBuild Remove="SpecFlow.Plus.Examples\SeleniumWebTest\TestApplication.UiTests\Features\CalculatorFeature.feature.cs" />
+        <UpToDateCheckBuild Remove="SpecFlow.Plus.Examples\TestThreadIsolation\TestThreadIsolation\Features\DatabaseAdd.feature.cs" />
+        <UpToDateCheckBuild Remove="SpecFlow.Plus.Examples\TestThreadIsolation\TestThreadIsolation\Features\MemoryAdd.feature.cs" />
+        <UpToDateCheckBuild Remove="SpecFlow.Plus.Examples\UseVSCode\src\TestProject\Features\UsingVSCodeAndSpecFlow.feature.cs" />
+        <UpToDateCheckBuild Remove="SpecFlow.Plus.Examples\VSTest_UnifiedResults\VSTest_UnifiedResults\Features\Scenarios.feature.cs" />
+        <UpToDateCheckBuild Remove="SpecFlow.Plus.Examples\WindowsAppDriver\WindowsAppDriver\Features\Calculator.feature.cs" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <CustomAdditionalCompileInputs Remove="SpecFlow.Plus.Examples\AccessTargetName\AccessTargetName\Features\Access Target Name.feature.cs" />
+        <CustomAdditionalCompileInputs Remove="SpecFlow.Plus.Examples\AppVeyor_Support\MyProject.Specs\Features\AppVeyor.feature.cs" />
+        <CustomAdditionalCompileInputs Remove="SpecFlow.Plus.Examples\Archive\contactlist\contactlist\contactlist.Test\Features\Add Contact.feature.cs" />
+        <CustomAdditionalCompileInputs Remove="SpecFlow.Plus.Examples\Archive\contactlist\contactlist\contactlist.Test\Features\ContactList.feature.cs" />
+        <CustomAdditionalCompileInputs Remove="SpecFlow.Plus.Examples\Archive\simpleCalc\simpleCalc\simpleCalc.Test\Features\Calc.feature.cs" />
+        <CustomAdditionalCompileInputs Remove="SpecFlow.Plus.Examples\Archive\simpleCalc_SpecFlowPlusStudio_LogicTests\simpleCalc.Test\Features\Calc.feature.cs" />
+        <CustomAdditionalCompileInputs Remove="SpecFlow.Plus.Examples\CustomDeploymentSteps\WindowsAppDriver\Features\Calculator.feature.cs" />
+        <CustomAdditionalCompileInputs Remove="SpecFlow.Plus.Examples\DeploymentTransformationMultipleThreads\DatabaseCode.Tests\Features\DatabaseWrite.feature.cs" />
+        <CustomAdditionalCompileInputs Remove="SpecFlow.Plus.Examples\DockerExample\DockerExample.Specs\Features\DockerExample.Specs.feature.cs" />
+        <CustomAdditionalCompileInputs Remove="SpecFlow.Plus.Examples\ExcelExample\ExcelExample\Features\CalculatorAdd.feature.xlsx.feature.cs" />
+        <CustomAdditionalCompileInputs Remove="SpecFlow.Plus.Examples\ExcelExample\ExcelExample\Features\CalculatorDivide.feature.cs" />
+        <CustomAdditionalCompileInputs Remove="SpecFlow.Plus.Examples\ExcelExample\ExcelExample\Features\CalculatorMultiply.feature.cs" />
+        <CustomAdditionalCompileInputs Remove="SpecFlow.Plus.Examples\ExcelExample\ExcelExample\Features\CalculatorSubtract.feature.cs" />
+        <CustomAdditionalCompileInputs Remove="SpecFlow.Plus.Examples\ExcelExample\ExcelExample\Steps\Features\CalculatorDivide.feature.cs" />
+        <CustomAdditionalCompileInputs Remove="SpecFlow.Plus.Examples\ExcelExample\ExcelExample\Steps\Features\CalculatorMultiply.feature.cs" />
+        <CustomAdditionalCompileInputs Remove="SpecFlow.Plus.Examples\ExcelExample\ExcelExample\Steps\Features\CalculatorSubstract.feature.cs" />
+        <CustomAdditionalCompileInputs Remove="SpecFlow.Plus.Examples\FilterExample\FilterTest\Features\CalculatorAdd.feature.cs" />
+        <CustomAdditionalCompileInputs Remove="SpecFlow.Plus.Examples\FilterExample\FilterTest\Features\CalculatorDivide.feature.cs" />
+        <CustomAdditionalCompileInputs Remove="SpecFlow.Plus.Examples\FilterExample\FilterTest\Features\CalculatorMultiply.feature.cs" />
+        <CustomAdditionalCompileInputs Remove="SpecFlow.Plus.Examples\FilterExample\FilterTest\Features\CalculatorSubstract.feature.cs" />
+        <CustomAdditionalCompileInputs Remove="SpecFlow.Plus.Examples\Getting_Started\MyProject.Specs\Features\Calculator.feature.cs" />
+        <CustomAdditionalCompileInputs Remove="SpecFlow.Plus.Examples\Getting_Started_Excel\MySpecs\calc.feature.xlsx.feature.cs" />
+        <CustomAdditionalCompileInputs Remove="SpecFlow.Plus.Examples\MultipleBrowserAgainstDifferentEnvironments\TestApplication.UiTests\Features\Search.feature.cs" />
+        <CustomAdditionalCompileInputs Remove="SpecFlow.Plus.Examples\MultipleReports\MultipleReports\Features\Calculator.feature.cs" />
+        <CustomAdditionalCompileInputs Remove="SpecFlow.Plus.Examples\NewCSProjFormat\SpecFlowNewCSProjFormat\Features\SpecFlowFeature1.feature.cs" />
+        <CustomAdditionalCompileInputs Remove="SpecFlow.Plus.Examples\SeleniumGridWebTest\TestApplication.UiTests\Features\CalculatorFeature.feature.cs" />
+        <CustomAdditionalCompileInputs Remove="SpecFlow.Plus.Examples\SeleniumWebTest\TestApplication.UiTests\Features\CalculatorFeature.feature.cs" />
+        <CustomAdditionalCompileInputs Remove="SpecFlow.Plus.Examples\TestThreadIsolation\TestThreadIsolation\Features\DatabaseAdd.feature.cs" />
+        <CustomAdditionalCompileInputs Remove="SpecFlow.Plus.Examples\TestThreadIsolation\TestThreadIsolation\Features\MemoryAdd.feature.cs" />
+        <CustomAdditionalCompileInputs Remove="SpecFlow.Plus.Examples\UseVSCode\src\TestProject\Features\UsingVSCodeAndSpecFlow.feature.cs" />
+        <CustomAdditionalCompileInputs Remove="SpecFlow.Plus.Examples\VSTest_UnifiedResults\VSTest_UnifiedResults\Features\Scenarios.feature.cs" />
+        <CustomAdditionalCompileInputs Remove="SpecFlow.Plus.Examples\WindowsAppDriver\WindowsAppDriver\Features\Calculator.feature.cs" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="Features\BirdBanks.feature" />
+      <Content Include="Features\GSTR1.feature" />
+    </ItemGroup>
+
+</Project>
